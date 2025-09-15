@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 72 72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffc536;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #f34624;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-4 {
+        fill: #dbdbdb;
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient-3);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="76.14" y1="5.73" x2="-44.85" y2="84.55" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ededed"/>
+      <stop offset="1" stop-color="#cbcbcb"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="78.26" y1="30.93" x2="-12.92" y2="55.67" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2ec9ff"/>
+      <stop offset="1" stop-color="#00aeff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="72.52" y1="9.8" x2="-18.65" y2="34.55" xlink:href="#linear-gradient-2"/>
+  </defs>
+  <path class="cls-3" d="M64.12,15.13v33.5c0,1.29-1.05,2.34-2.34,2.34H10.22c-1.29,0-2.34-1.05-2.34-2.34V15.13c0-1.29,1.05-2.34,2.34-2.34h51.56c1.29,0,2.34,1.05,2.34,2.34Z"/>
+  <g>
+    <path class="cls-2" d="M59.13,57.38l-2.24-.6-.82,2.16c-.13.35-.62.38-.79.04l-2.45-4.8-2.45,4.8c-.17.33-.65.31-.79-.04l-.83-2.16-2.23.6c-.36.1-.67-.28-.5-.61l4.86-9.52,1.93.99,1.93-.99,4.86,9.52c.17.33-.14.71-.5.61Z"/>
+    <path class="cls-1" d="M59.75,47.96c0,3.83-3.1,6.93-6.92,6.93s-6.93-3.1-6.93-6.93,3.1-6.92,6.93-6.92,6.92,3.1,6.92,6.92Z"/>
+    <circle class="cls-2" cx="52.83" cy="47.96" r="4.8"/>
+  </g>
+  <rect class="cls-4" x="13.68" y="25.06" width="44.57" height=".93" rx=".34" ry=".34"/>
+  <rect class="cls-4" x="13.68" y="35.16" width="19.93" height=".94" rx=".34" ry=".34"/>
+  <rect class="cls-4" x="13.68" y="38.54" width="19.93" height=".94" rx=".34" ry=".34"/>
+  <rect class="cls-5" x="13.68" y="43.34" width="25.17" height="3.4" rx="1.33" ry="1.33"/>
+  <rect class="cls-6" x="13.68" y="17.01" width="44.57" height="5.43" rx="1.33" ry="1.33"/>
+  <rect class="cls-4" x="13.68" y="28.43" width="44.57" height=".94" rx=".34" ry=".34"/>
+  <rect class="cls-4" x="13.68" y="31.8" width="44.57" height=".93" rx=".34" ry=".34"/>
+</svg>

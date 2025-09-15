@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 72 72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #609dc6;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-5 {
+        fill: #93a0aa;
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-7 {
+        fill: #7eaecf;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="36" y1="50.83" x2="36" y2="58.03" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#89949e"/>
+      <stop offset="1" stop-color="#b1c0cf"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="15.24" y1="61.55" x2="51.05" y2="57.25" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9daab5"/>
+      <stop offset="1" stop-color="#c5d5e6"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="-16.48" y1="46.87" x2="60.16" y2="25.41" xlink:href="#linear-gradient-2"/>
+    <linearGradient id="linear-gradient-4" x1="6.78" y1="47.2" x2="53.18" y2="19.65" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#a8d5de"/>
+      <stop offset="1" stop-color="#b8e9f2"/>
+    </linearGradient>
+  </defs>
+  <polygon class="cls-2" points="45.25 58.81 26.75 58.81 28.07 55.72 28.58 54.54 29.67 51.98 42.33 51.98 43.42 54.54 43.93 55.72 45.25 58.81"/>
+  <path class="cls-3" d="M50.06,59.98h-28.13c1-1.47,2.67-2.35,4.44-2.35h19.24c1.78,0,3.44.88,4.44,2.35h0Z"/>
+  <path class="cls-4" d="M62.19,15.45v33.45c0,1.89-1.53,3.43-3.43,3.43H13.24c-1.89,0-3.43-1.54-3.43-3.43V15.45c0-1.89,1.53-3.43,3.43-3.43h45.52c1.89,0,3.43,1.54,3.43,3.43Z"/>
+  <path class="cls-5" d="M36,50.04c-.35,0-.68-.22-.81-.54-.15-.36-.04-.79.27-1.03.64-.51,1.59.1,1.4.89-.09.39-.45.68-.86.68Z"/>
+  <path class="cls-6" d="M62.19,15.45v30.76H9.81V15.45c0-1.89,1.53-3.43,3.43-3.43h45.52c1.89,0,3.43,1.54,3.43,3.43"/>
+  <g>
+    <polyline class="cls-1" points="43.48 37.04 42.24 35.79 47.93 30.1 42.24 24.41 43.48 23.16 50.42 30.1 43.48 37.04"/>
+    <polygon class="cls-1" points="28.52 37.04 21.58 30.1 28.52 23.16 29.76 24.41 24.07 30.1 29.76 35.79 28.52 37.04"/>
+    <polyline class="cls-1" points="33.96 39.45 32.28 38.92 38.04 20.75 39.72 21.28 33.96 39.45"/>
+  </g>
+  <g>
+    <polyline class="cls-7" points="43.48 23.16 42.24 24.41 47.93 30.1 42.24 35.79 43.48 37.04 50.42 30.1 43.48 23.16"/>
+    <polyline class="cls-7" points="35.2 35.54 33.64 39.35 33.96 39.45 35.2 35.54"/>
+  </g>
+</svg>

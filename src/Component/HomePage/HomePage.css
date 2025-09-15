@@ -1,0 +1,58 @@
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* .Mentor-card {
+  border: 1px solid red;
+} */
+
+.Mentor-card {
+  position: relative;
+}
+
+.Mentor-card::before {
+  width: 25%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    to right,
+    /* or to left/top/bottom as needed */ #9daffc 15%,
+    /* indigo-200 (10% position) */ #8baffcb2 50%,
+    /* white at 30% (via) */ #ffffff46 90% /* white at 90% (to) */
+  ) !important;
+  top: 0;
+  left: 0;
+  transition: 200ms ease;
+  /* z-index: -1; */
+}
+
+.Mentor-card:hover::before {
+  width: 150%;
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+@keyframes blink {
+  100%,
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.blink {
+  animation: blink 5s infinite;
+}
