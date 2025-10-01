@@ -1610,7 +1610,7 @@ const HomePage = () => {
               {cardData.map((item, index) => (
                 <div
                   key={index}
-                  className="flex-col  relative  bg-blue-100/50 shadow-md shadow-black/70 text-white rounded-xl min-w-50 md:min-w-85 h-full  transition-transform duration-300 "
+                  className="flex-col  relative  bg-blue-100/50 shadow-md shadow-black/70 text-white rounded-xl min-w-70 md:min-w-85 h-full  transition-transform duration-300 "
                 >
                   <div className="absolute top-3 right-3 text-white text-sm font-semibold ">
                     <img
@@ -1758,7 +1758,7 @@ const HomePage = () => {
         <h3 className="text-2xl  w-full  font-semibold mb-4">
           {selectedCategory}
         </h3>
-        <div className="flex justify-start scroll-smooth no-scrollbar items-center overflow-auto p-4 gap-6  h-full">
+        <div className="flex justify-start scroll-smooth no-scrollbar items-center overflow-auto py-4 px-2 md:px-4 gap-6  h-full">
           {allCourses[selectedCategory].map((course, index) => (
             <Link
               to={`/CoursesPage/${course.id}`}
@@ -1821,7 +1821,7 @@ const HomePage = () => {
                 ref={scrollRef}
                 className="w-full flex justify-start py-10  items-center overflow-x-auto no-scrollbar scroll-smooth"
               >
-                <div className="flex gap-6 w-max px-6">
+                <div className="flex gap-6 w-max px-2 md:px-6">
                   {cards.map((item, index) => (
                     <div
                       key={index}
@@ -2113,7 +2113,7 @@ const HomePage = () => {
         </h2>
 
         <div className="w-full overflow-x-auto  scroll-smooth no-scrollbar py-6">
-          <div className="flex gap-6 w-max px-4 ">
+          <div className="flex gap-6 w-max px-2 sm:px-4 ">
             {mentors.map((mentor, index) => (
               <div
                 key={index}
@@ -2201,11 +2201,13 @@ const HomePage = () => {
               className="absolute top-24 right-16 w-10 h-10"
             /> */}
 
-            <img
-              src={masterclasshuman} // <-- Replace with actual image
-              alt="Student"
-              className="relative z-10 w-full sm:w-full sm:h-120 h-60 lg:w-full lg:h-100  object-cover"
-            />
+            <div className="relative npm r  z-10 w-full sm:w-full sm:h-120 h-60 lg:w-full lg:h-100  object-cover">
+              <img
+                src={masterclasshuman} // <-- Replace with actual image
+                alt="Student"
+                className=""
+              />
+            </div>
           </div>
 
           <div className="flex  flex-col justify-center items-center w-full lg:w-1/2 text-center md:text-left  px-6  mt-10 md:mt-0">

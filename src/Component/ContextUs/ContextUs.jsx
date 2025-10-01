@@ -542,17 +542,17 @@ const ContextUs = ({ showNav = true }) => {
         />
         <span className="hidden md:flex ">Chat on WhatsApp</span>
       </a> */}
-      <div>
+      {/* <div>
         <a
           href="https://wa.me/919044948306?text=Hello%20Kaushal%2C%20I%20want%20to%20know%20more%20about%20your%20courses."
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 justify-center fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full  shadow-lg z-100 "
         >
-          {/* Outer glow pulse */}
+         
           <span className="absolute inset-0 rounded-full bg-green-500 opacity-75  animate-ping "></span>
 
-          {/* WhatsApp icon */}
+          
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
             alt="WhatsApp"
@@ -560,7 +560,7 @@ const ContextUs = ({ showNav = true }) => {
           />
           <span className="hidden md:flex text-sm">Chat on WhatsApp</span>
         </a>
-      </div>
+      </div> */}
 
       {/* ----------------------------------- */}
       {/* <Link to="/contextus"> */}

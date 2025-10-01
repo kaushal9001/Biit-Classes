@@ -743,9 +743,13 @@ const AllCoursePage = () => {
   const coursesButton = [
     {
       name: "Professional Courses",
+      active: true,
+      bg: "bg-red-500",
     },
     {
       name: "Graduation",
+      active: false,
+      bg: "bg-red-500",
     },
   ];
 
@@ -855,12 +859,18 @@ const AllCoursePage = () => {
           {coursesButton.map((coursesButton, i) => (
             <button
               key={i}
-              onClick={() => setSelectedAllCoursesType(coursesButton.name)}
-              className=" cursor-pointer  bg-blue-950 text-white shadow-black shadow-md hover:shadow-lg transition decoration-500 w-full md:w-[50%]  rounded-2xl text-3xl px-5 py-5"
+              onClick={() => {
+                setSelectedAllCoursesType(coursesButton.name);
+              }}
+              className={` cursor-pointer  bg-blue-950 text-white shadow-black shadow-md hover:shadow-lg transition decoration-500 w-full md:w-[50%]  rounded-2xl text-3xl px-5 py-5 `}
             >
               {coursesButton.name}
             </button>
           ))}
+        </div>
+        <div className="flex justify-center border-b text-blue-950 border-blue-900 py-4 text-6xl  w-full mt-10">
+          {" "}
+          {selectedAllCoursesType}{" "}
         </div>
         <section
           className={`mt-5 ${

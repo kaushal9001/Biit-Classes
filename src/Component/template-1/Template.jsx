@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import { LiaDownloadSolid } from "react-icons/lia";
+import FaqAccordion from "../../Component/template-1/FaqAccordion";
 // import { TiTick } from "react-icons/ti";
 // import { VscVscode } from "react-icons/vsc";
 // import { DiGithubBadge } from "react-icons/di";
@@ -876,7 +877,7 @@ const Template = () => {
   const [selectedCourse, setSelectedCourse] = useState(
     course ? course.courseInfo.buttons[0].module : null
   );
-  const [category, setCategory] = useState("Web Development");
+  const [category, setCategory] = useState(course.courseInfo.name);
   if (!course) {
     return <h2>Course not found</h2>;
   }
@@ -929,14 +930,14 @@ const Template = () => {
   return (
     <div className="bg-blue-100/50">
       <section className=" overflow-hidden  bg-gradient-to-r from-blue-950  to-purple-950 px-5 md:px-20 ">
-        <div className="flex flex-wrap absolute left-0 top-0  overflow-hidden w-full h-234 sm:h-222 md:h-150 lg:h-150 xl:h-180">
+        <div className="flex flex-wrap absolute left-0 top-0  overflow-hidden w-full h-215 sm:h-205 md:h-150 lg:h-150 xl:h-180">
           {" "}
           {Array.from({ length: 1000 }).map((_, index) => (
             <div className="w-16 h-15 border border-blue-900/20"></div>
           ))}
         </div>
         <p className="flex  items-center text-white md:ps-20 pt-30 font-semibold">
-          <Link to={"/"} className="flex items-center ">
+          <Link to={"/"} className="flex items-center z-20 ">
             {" "}
             <FaHome /> Home
           </Link>
@@ -964,7 +965,10 @@ const Template = () => {
                 to={"/contextus"}
                 className=" bg-blue-800 shadow-md shadow-black text-[white] h-[50px] w-full md:w-[50%] rounded-[7px]"
               >
-                <button className="w-full h-full "> Enroll Now </button>
+                <button className="w-full h-full cursor-pointer ">
+                  {" "}
+                  Enroll Now{" "}
+                </button>
               </Link>
               {/* <button className="flex items-center gap-2 border-[1px] border-blue-800 text-blue-800 bg-blue-100 shadow-md shadow-black font-semibold rounded-[7px] px-3 h-[50px] w-full md:w-[50%]">
                 <LiaDownloadSolid /> Download Curriculum
@@ -1034,7 +1038,7 @@ const Template = () => {
         </div>
       </section>
       <section className="w-full py-14 px-5 md:px-20">
-        <h2 className="text-4xl py-3 ps-5 border-s-5 border-red-600/60  md:text-4xl font-bold  mb-12 text-gray-900">
+        <h2 className="text-4xl py-3 ps-5 border-s-5 border-blue-950  md:text-4xl font-bold  mb-12 text-gray-900">
           {course.courseInfo.exclusiveCourseH}
         </h2>
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 ">
@@ -1053,7 +1057,7 @@ const Template = () => {
         </div>
       </section>
       <section className="h-[50vh] w-[100%]  mt-[60px] px-5 md:px-20 ">
-        <div className="flex py-3 font-bold text-4xl ps-5 border-s-5 border-red-600/60   text-gray-900">
+        <div className="flex py-3 font-bold text-4xl ps-5 border-s-5 border-blue-950  text-gray-900">
           <h1>{course.courseInfo.masterToolsH}</h1>
         </div>
 
@@ -1085,18 +1089,18 @@ const Template = () => {
           </button>
         </div>
       </section>
-      {/* <section className="curriculum bg-[#f8f8f8] min-h-[150vh] px-5 md:px-20">
+      <section className="curriculum   min-h-[100vh]  px-5 md:px-20">
         <div>
-          <h1 className=" flex  text-4xl ps-5 border-s-5 border-red-600/60  font-bold text-[#484a4e] py-3 mb-10">
+          <h1 className=" flex  text-4xl ps-5 border-s-5 border-blue-950  font-bold text-[#484a4e] py-3 mb-10">
             {course.courseInfo.courseCurriculumH}
           </h1>
           <div className="tabs overflow-x-auto  scrollbar-hide ">
             <ul className="flex gap-[15px] overflow-x-auto scroll-smooth no-scrollbar mb-5">
               {course.courseInfo.buttons.map((button, idx) => (
                 <li
-                  className={`flex border rounded-lg border-gray-300 py-3 min-w-[220px] items-center justify-center cursor-pointer hover:bg-[#d45d56] hover:text-white ${
+                  className={`flex border rounded-lg border-gray-300 py-3 min-w-[220px] items-center justify-center cursor-pointer hover:bg-blue-950 transition duration-500 hover:text-white ${
                     category === button.title
-                      ? "bg-[#d45d56] text-white"
+                      ? "bg-blue-950 text-white"
                       : "bg-[#fff]"
                   }`}
                   onClick={() => {
@@ -1114,9 +1118,9 @@ const Template = () => {
             <div className="lg:flex flex-col md:h-[70vh] hidden h-[100vh]  flex-1 w-[300px]  overflow-y-auto">
               {selectedCourse.map((item, idx) => (
                 <button
-                  className={`border-b-[1px] border-b-[#bbb] cursor-pointer h-[80px] w-full  py-[30px]  hover:text-[#d45d56] ${
+                  className={`border-b-[1px] border-b-[#bbb] cursor-pointer h-[80px] w-full  py-[30px]  hover:text-blue-800 ${
                     selectedModule.name === item.name &&
-                    "text-[#d45d56] border-s-2  "
+                    "text-blue-800 border-s-2  "
                   } `}
                   onClick={() => {
                     setSelectedModule(item);
@@ -1152,7 +1156,6 @@ const Template = () => {
                       : ""
                   }`}
                 >
-                  
                   <button
                     onClick={() => toggleModule(module.name)}
                     className={`w-full flex justify-between items-center px-4 py-3 text-left ${
@@ -1177,7 +1180,6 @@ const Template = () => {
                     />
                   </button>
 
-                  
                   {activeModule === module.name && (
                     <ul className="pl-6 pr-4 pb-3 space-y-2 bg-gray-50">
                       {module.modules?.map((lesson, j) => (
@@ -1195,17 +1197,17 @@ const Template = () => {
             </div>
           </div>
         </div>
-        <div className=" flex text-xl justify-center  pb-10 lg:pb-0 ">
+        {/* <div className=" flex text-xl justify-center  pb-10 lg:pb-0 ">
           <button className="flex items-center  gap-[30px] mt-[80px] justify-center bg-white text-[#e97862] h-[70px] w-[300px] rounded-[40px] cursor-pointer">
             Download Curriculum{" "}
             <div className="bg-[#e97862] p-[5px] text-2xl text-white rounded-[50%]">
               <LiaDownloadSolid />
             </div>
           </button>
-        </div>
-      </section> */}
-      {/* <section className="bg-white  px-5 md:px-20 mt-10">
-        <h1 className="text-4xl py-3 ps-5 border-s-5 border-red-600/60   text-neutral-700   font-bold  mb-6 flex ">
+        </div> */}
+      </section>
+      <section className=" px-5 md:px-20 mt-10">
+        <h1 className="text-4xl py-3 ps-5 border-s-5 border-blue-950   text-neutral-700   font-bold  mb-6 flex ">
           {course.courseInfo.BuildProjectsFromScratchH}
         </h1>
         <div className="project-containers flex   pt-[20px] gap-[20px]">
@@ -1223,9 +1225,9 @@ const Template = () => {
             ))}
           </div>
         </div>
-      </section> */}
-      {/* <section className="px-5 md:px-20 py-10 flex flex-col ">
-        <h2 className="text-4xl ps-5 border-s-5 border-red-600/60   text-neutral-700 p-2  font-bold  mb-6 flex ">
+      </section>
+      <section className="px-5 md:px-20 py-10 flex flex-col ">
+        <h2 className="text-4xl ps-5 border-s-5 border-blue-950  text-neutral-700 p-2  font-bold  mb-6 flex ">
           {course.Mentors.Heading}
         </h2>
 
@@ -1285,22 +1287,21 @@ const Template = () => {
             ))}
           </div>
         </div>
-      </section> */}
-      {/* <div className="bg-blue-200 py-1 flex flex-col sm:flex-row  items-center justify-center gap-[10px] font-[20px]">
+      </section>
+      <div className="bg-blue-200 py-1 flex flex-col sm:flex-row  items-center justify-center gap-[10px] font-[20px]">
         {" "}
-        <div className="bg-white rounded-[50%] w-[25px] h-[25px] font-[20px] flex justify-center items-center text-yellow-700">
+        <div className="bg-blue-950 rounded-[50%] w-[25px] h-[25px] font-[20px] flex justify-center items-center text-white">
           <FaQuestion />
         </div>
         Still confused? Let us clear all your queries{" "}
-        <a href="#call">
-          {" "}
-          <button className=" bg-blue-500 px-5 py-2 flex justify-center items-center text-white rounded-[5px]">
+        <a onClick={() => setOpen(true)}>
+          <button className=" bg-blue-950 hover:bg-blue-900 px-5 py-2 flex justify-center items-center text-white rounded-[5px]">
             Get Call Back
           </button>
         </a>
-      </div> */}
-      {/* <section className="w-full  bg-white px-5 md:px-20 text-black flex flex-col">
-        <h1 className="text-4xl py-3 ps-5 border-s-5 border-red-600/60   text-neutral-700  mt-10 font-bold  mb-6 flex ">
+      </div>
+      <section className="w-full  px-5 md:px-20 text-black flex flex-col">
+        <h1 className="text-4xl py-3 ps-5 border-s-5 border-blue-950  text-neutral-700  mt-10 font-bold  mb-6 flex ">
           Validating Your Success: About Your Certificate
         </h1>
 
@@ -1327,9 +1328,9 @@ const Template = () => {
             />
           </div>
         </div>
-      </section> */}
-      {/* <section className="w-full bg-white py-14 px-6 md:px-20">
-        <h2 className="text-4xl py-3 ps-5 border-s-5 border-red-600/60  md:text-4xl font-bold  mb-12 text-gray-900">
+      </section>
+      <section className="w-full  py-14 px-6 md:px-20">
+        <h2 className="text-4xl py-3 ps-5 border-s-5 border-blue-950 md:text-4xl font-bold  mb-12 text-neutral-700">
           Alumni's Testimonies
         </h2>
 
@@ -1358,8 +1359,8 @@ const Template = () => {
             </div>
           ))}
         </div>
-      </section> */}
-      <section className="relative bg-blue-100  px-5 md:px-20 flex flex-col md:flex-row items-center justify-between overflow-hidden ">
+      </section>
+      <section className="relative bg-blue-200  px-5 md:px-20 flex flex-col md:flex-row items-center justify-between overflow-hidden ">
         <div className="absolute top-10 left-10 w-32 h-32 bg-yellow-200 rounded-full opacity-60 -z-10"></div>
         <div className="absolute bottom-10 right-20 w-40 h-40 bg-blue-200 rounded-full opacity-50 -z-10"></div>
 
@@ -1386,8 +1387,8 @@ const Template = () => {
           />
         </div>
       </section>
-      {/* <section className="bg-white py-10 px-5 md:px-20">
-        <h2 className="text-4xl py-3 ps-5 border-s-5 border-red-600/60  font-bold mb-4 flex ">
+      <section className="py-10 px-5 md:px-20">
+        <h2 className="text-4xl py-3 ps-5 border-s-5 border-blue-950 text-neutral-700 font-bold mb-4 flex ">
           {course.courseInfo.name} Cource
         </h2>
 
@@ -1429,7 +1430,7 @@ const Template = () => {
             career prospects.
           </p>
 
-          <h3 className="text-2xl font-bold mb-3">
+          <h3 className="text-2xl font-bold mb-3 text-neutral-700">
             What is Full Stack Web Development?
           </h3>
 
@@ -1501,7 +1502,7 @@ const Template = () => {
             {isExpanded ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
           </button>
         </div>
-      </section> */}
+      </section>
       <section className="relative bg-[#c3d3bb] px-5 md:px-20 flex flex-col md:flex-row items-center justify-between overflow-hidden">
         <div className="absolute top-10 left-10 w-32 h-32 bg-yellow-200 rounded-full opacity-60 -z-10"></div>
         <div className="absolute bottom-10 right-20 w-40 h-40 bg-blue-200 rounded-full opacity-50 -z-10"></div>
@@ -1530,6 +1531,7 @@ const Template = () => {
           />
         </div>
       </section>
+      <FaqAccordion />
       <div className="z-100 border">
         <Dialog open={open} onClose={setOpen} className="relative z-10">
           <DialogBackdrop
@@ -1545,13 +1547,6 @@ const Template = () => {
               >
                 <div className="bg-gray-200 px-4 pt-5 pb-4  sm:p-6 sm:pb-4">
                   <div className="sm:flex sm:items-start">
-                    {/* <div className="mx-auto flex size-12 shrink-0 items-center justify-center rounded-full bg-red-500/10 sm:mx-0 sm:size-10">
-                      <ExclamationTriangleIcon
-                        aria-hidden="true"
-                        className="size-6 text-red-400"
-                      />
-                      
-                    </div> */}
                     <div className="mt-3  w-full text-center  sm:text-left">
                       <form onSubmit={handleSubmit(onSubmit)}>
                         <div>
@@ -1626,8 +1621,6 @@ const Template = () => {
                         <div className=" px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                           <button
                             type="submit"
-                            // onClick={() => setOpen(false)}
-
                             className="bg-blue-900 hover:bg-blue-950 transition duration-300 text-white px-10 py-2 rounded"
                           >
                             Submit
